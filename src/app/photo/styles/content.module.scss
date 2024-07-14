@@ -1,0 +1,116 @@
+$gray: rgba(104, 108, 141, 0.5);
+$light-gray: #E6E7E9;
+$green: green;
+$border-radius: 4px;
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 62px;
+  margin-bottom: 48px;
+}
+
+.video_container {
+  height: 90%;
+}
+
+.wrapper_container {
+  display: flex;
+  justify-content: center; /* 全体を中央に */
+  width: 100%; /* コンテナの幅を全画面に */
+  align-items: center; /* 垂直中央揃え */
+}
+
+.conditions_container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 内部の要素を左に揃える */
+  margin-top: 100px;
+
+  .form_group {
+    margin: 0 10px 10px 20px;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: left; 
+  }
+  
+  .select,
+  .input_text {
+    width: 100%;
+    padding: 8px 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  
+  .select:focus,
+  .input_text:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+
+  .user_name_display {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    color: #333;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .form_row {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.video_upload_button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 44px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+}
+
+.video_upload_button_disabled {
+  background-color: $light-gray;
+  color: $gray;
+  cursor: not-allowed;
+}
+
+// エラーメッセージ
+.error {
+  color: #ff0000;
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 8px;
+}

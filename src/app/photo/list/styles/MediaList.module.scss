@@ -1,0 +1,125 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.mediaItem {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+
+  .memberIdShimmer,
+  .dateShimmer,
+  .videoShimmer,
+  .photoShimmer {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+  }
+
+  .memberIdShimmer {
+    margin-bottom: 10px;
+  }
+
+  .dateShimmer {
+    margin-bottom: 15px;
+  }
+
+  .videoShimmer,
+  .photoShimmer {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 15px;
+  }
+}
+
+.memberId {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.mediaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.video, .photo {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.memberId, .date {
+  .react-shimmer {
+    margin-bottom: 10px;
+  }
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .mediaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
